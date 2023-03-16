@@ -1,0 +1,48 @@
+ion-toolbar {
+  color: var(--dany-gold);
+  background: var(--dany-secondary);
+}
+
+.listmenu,
+.seeall {
+  color: var(--dany-white);
+}
+
+* {
+  font-family: var(--dany-font-hack);
+}
+
+p {
+  font-family: var(--dany-font-hack-italic);
+  color: var(--dany-gold);
+}
+
+hr {
+  background: var(--dany-gold);
+}
+
+h2 {
+  font-family: var(--dany-font-hack-bold);
+}
+
+ion-content {
+  ion-segment {
+    ion-segment-button {
+      --indicator-color: var(--dany-gold);
+    }
+
+    /* Material Design styles */
+    ion-segment-button.md {
+      --color: #000;
+      --color-checked: var(--dany-gold);
+      --indicator-height: 4px;
+    }
+
+    /* iOS styles */
+    ion-segment-button.ios {
+      --color: var(--dany-gold);
+      --color-checked: var(--dany-secondary);
+      --border-radius: 20px;
+    }
+  }
+}

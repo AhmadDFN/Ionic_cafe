@@ -1,0 +1,139 @@
+<ion-content>
+  <!-- Header -->
+  <ion-card id="header" class="ion-no-margin">
+    <ion-card-header>
+      <ion-item
+        class="ion-no-padding ion-activatable ripple-parent rectangle"
+        lines="none"
+        [routerLink]="['/tabs/tab4']"
+        routerLinkActive="router-link-active"
+      >
+        <ion-avatar slot="end">
+          <img
+            alt="Silhouette of a person's head"
+            src="https://ionicframework.com/docs/img/demos/avatar.svg"
+          />
+        </ion-avatar>
+        <ion-label>
+          {{ user.name }}
+          <p>{{ user.role }}</p>
+        </ion-label>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-item>
+    </ion-card-header>
+  </ion-card>
+  <!-- End Header -->
+  <ion-searchbar
+    id="search"
+    show-cancel-button="focus"
+    placeholder="Cari Disini"
+  ></ion-searchbar>
+  <!-- Slide -->
+  <!-- <ion-slides mode="md" pager="md" scrollbar="md" [scrollbar]="false">
+    <ion-slide>
+      <ion-card class="ion-no-margin">
+        <img src="assets/images/Slide1.png" alt="" />
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="ion-no-margin">
+        <img src="assets/images/Slide2.png" alt="" />
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card class="ion-no-margin">
+        <img src="assets/images/Slide3.png" alt="" />
+      </ion-card>
+    </ion-slide>
+  </ion-slides> -->
+  <!-- End Slide -->
+  <!-- Category -->
+  <ion-card id="category" class="ion-no-margin">
+    <ion-row>
+      <ion-col size="3">
+        <div class="cat-item">
+          <img src="assets/images/fast-food.png" alt="" />
+          <p>MAKANAN</p>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="cat-item">
+          <img src="assets/images/drink.png" alt="" />
+          <p>MINUMAN</p>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="cat-item">
+          <img src="assets/images/nachos.png" alt="" />
+          <p>SNACK</p>
+        </div>
+      </ion-col>
+      <ion-col size="3">
+        <div class="cat-item">
+          <img src="assets/images/fruits.png" alt="" />
+          <p>FRUITS</p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+  <!-- End Category -->
+  <!-- Skeleton Animasi -->
+  <ion-list *ngIf="!menus">
+    <ion-list-header>
+      <ion-label>MENU</ion-label>
+      <ion-button>See All</ion-button>
+    </ion-list-header>
+    <ion-item lines="none" *ngFor="let sk of [1,2,3,4,5]">
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text [animated]="true"></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <p>
+          <ion-skeleton-text
+            [animated]="true"
+            style="width: 40%"
+          ></ion-skeleton-text>
+        </p>
+        <h2>
+          <ion-skeleton-text
+            [animated]="true"
+            style="width: 80%"
+          ></ion-skeleton-text>
+        </h2>
+        <p class="price">
+          <ion-skeleton-text
+            [animated]="true"
+            style="width: 60%"
+          ></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- End Skeleton Animasi -->
+
+  <!-- List Menu  -->
+  <ion-list *ngIf="menus">
+    <ion-list-header>
+      <ion-label>MENU</ion-label>
+      <ion-button
+        [routerLink]="['/tabs/tab2']"
+        routerLinkActive="router-link-active"
+        >See All</ion-button
+      >
+    </ion-list-header>
+    <ion-item (click)="goDetailMenu(mn)" lines="none" *ngFor="let mn of menus">
+      <ion-thumbnail slot="start">
+        <img src="{{ mn.foto }}" />
+      </ion-thumbnail>
+      <ion-label>
+        <p>{{ mn.cat_nm }}</p>
+        <h2>{{ mn.mn_nama }}</h2>
+        <p class="price">Rp {{ mn.mn_harga | number }} ,-</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- End Menu Favorit -->
+  <!-- <ion-card>
+    <img src="assets/images/Slide3.png" alt="" />
+  </ion-card> -->
+</ion-content>

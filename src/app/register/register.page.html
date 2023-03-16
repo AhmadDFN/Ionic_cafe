@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>REGISTER</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="reg">
+    <div class="logo">
+      <img src="assets/images/Darkmode.png" alt="" />
+    </div>
+    <div class="form">
+      <ion-item lines="none">
+        <ion-input
+          [(ngModel)]="reg.name"
+          type="text"
+          placeholder="Name"
+        ></ion-input>
+      </ion-item>
+      <hr />
+      <ion-item lines="none">
+        <ion-input
+          [(ngModel)]="reg.email"
+          type="text"
+          placeholder="Email"
+        ></ion-input>
+      </ion-item>
+      <hr />
+      <ion-item lines="none">
+        <ion-input
+          [(ngModel)]="reg.password"
+          type="password"
+          placeholder="Password"
+        ></ion-input>
+      </ion-item>
+      <hr />
+      <br />
+      <br />
+      <ion-button
+        (click)="goRegister()"
+        expand="block"
+        mode="ios"
+        shape="round"
+      >
+        Sign Up
+      </ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,7 @@
+{
+  "name": "CafeIK",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

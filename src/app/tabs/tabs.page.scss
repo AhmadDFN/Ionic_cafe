@@ -1,0 +1,13 @@
+ion-tab-button {
+  color: #936200;
+}
+
+ion-tab-button:hover ion-icon,
+ion-tab-button:hover ion-label {
+  color: var(--dany-gold);
+}
+
+ion-tab-button.tab-selected {
+  color: #f7a400;
+  --ripple-color: rgb(255, 255, 60);
+}

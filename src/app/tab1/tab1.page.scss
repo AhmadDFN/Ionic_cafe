@@ -1,0 +1,64 @@
+ion-content {
+  background: var(--dany-secondary);
+}
+#header {
+  background-color: var(--dany-secondary);
+  box-shadow: unset;
+
+  ion-card-header {
+    padding: 10px;
+
+    ion-item {
+      --background: transparent;
+
+      ion-label {
+        padding: 0 10px;
+        color: var(--dany-gold);
+        font-family: var(--dany-font-hack-bold);
+
+        p {
+          margin-top: 5px;
+          color: var(--dany-gold);
+          font-family: var(--dany-font-hack-italic);
+        }
+      }
+    }
+  }
+}
+
+* {
+  font-family: var(--dany-font-hack);
+}
+
+p {
+  font-family: var(--dany-font-hack-italic);
+  color: var(--dany-gold);
+}
+
+ion-searchbar {
+  --background: var(--dany-secondary);
+  --border-radius: 100px;
+  font-family: var(--dany-font-hack-bold-italic);
+  --color: var(--dany-gold);
+}
+
+#category {
+  box-shadow: unset;
+  padding: 10px 0;
+
+  .cat-item {
+    text-align: center;
+
+    img {
+      width: 64px;
+      padding: 10px;
+      border-radius: 100%;
+      -webkit-border-radius: 100%;
+      border: 1px solid var(--dany-gold);
+    }
+
+    p {
+      margin: 5px 0 0 0;
+    }
+  }
+}
