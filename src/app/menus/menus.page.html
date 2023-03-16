@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar style="text-align: center">
+  <ion-toolbar>
     <ion-title> MENU LIST </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -31,7 +31,7 @@
   <ion-list *ngIf="!menus">
     <ion-list-header>
       <ion-label class="listmenu">MENU</ion-label>
-      <ion-button class="seeall">See FAV</ion-button>
+      <ion-button class="seeall">See All</ion-button>
     </ion-list-header>
     <hr />
     <ion-item lines="none" *ngFor="let sk of [1,2,3,4,5]">
@@ -66,39 +66,23 @@
   <ion-list *ngIf="menus">
     <ion-list-header>
       <ion-label class="listmenu">MENU</ion-label>
-      <ion-button
-        class="seeall"
-        [routerLink]="['/tabs/tab1']"
-        routerLinkActive="router-link-active"
-        >See FAV</ion-button
-      >
+      <ion-button class="seeall">See All</ion-button>
     </ion-list-header>
     <hr />
-    <ion-item class="ion-activatable ripple-parent rectangle" lines="none">
-      <ion-grid fixed class="">
-        <ion-row size="auto">
-          <ion-col
-            size="6"
-            *ngFor="let mn of menus | filter:search"
-            (click)="goDetailMenu(mn)"
-          >
-            <ion-card>
-              <ion-card-title>
-                <p class="price">Rp {{ mn.mn_harga | number }} ,-</p>
-              </ion-card-title>
-              <ion-thumbnail>
-                <img src="{{ mn.foto }}" />
-              </ion-thumbnail>
-              <ion-card-header>
-                <ion-card-subtitle>
-                  <p>{{ mn.cat_nm }}</p>
-                  <h2>{{ mn.mn_nama }}</h2>
-                </ion-card-subtitle>
-              </ion-card-header>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+    <ion-item
+      class="ion-activatable ripple-parent rectangle"
+      lines="none"
+      *ngFor="let mn of menus | filter:search"
+      (click)="goDetailMenu(mn)"
+    >
+      <ion-thumbnail slot="start">
+        <img src="{{ mn.foto }}" />
+      </ion-thumbnail>
+      <ion-label>
+        <p>{{ mn.cat_nm }}</p>
+        <h2>{{ mn.mn_nama }}</h2>
+        <p class="price">Rp {{ mn.mn_harga | number }} ,-</p>
+      </ion-label>
       <ion-ripple-effect></ion-ripple-effect>
     </ion-item>
   </ion-list>

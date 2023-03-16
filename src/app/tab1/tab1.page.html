@@ -80,9 +80,10 @@
   <!-- Skeleton Animasi -->
   <ion-list *ngIf="!menus">
     <ion-list-header>
-      <ion-label>MENU</ion-label>
-      <ion-button>See All</ion-button>
+      <ion-label class="listmenu">MENU</ion-label>
+      <ion-button class="seeall">See All</ion-button>
     </ion-list-header>
+    <hr />
     <ion-item lines="none" *ngFor="let sk of [1,2,3,4,5]">
       <ion-thumbnail slot="start">
         <ion-skeleton-text [animated]="true"></ion-skeleton-text>
@@ -114,13 +115,15 @@
   <!-- List Menu  -->
   <ion-list *ngIf="menus">
     <ion-list-header>
-      <ion-label>MENU</ion-label>
+      <ion-label class="listmenu">MENU</ion-label>
       <ion-button
+        class="seeall"
         [routerLink]="['/tabs/tab2']"
         routerLinkActive="router-link-active"
         >See All</ion-button
       >
     </ion-list-header>
+    <hr />
     <ion-item (click)="goDetailMenu(mn)" lines="none" *ngFor="let mn of menus">
       <ion-thumbnail slot="start">
         <img src="{{ mn.foto }}" />

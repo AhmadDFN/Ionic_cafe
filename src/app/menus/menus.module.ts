@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab2Page } from './tab2.page';
+import { MenusPage } from './menus.page';
 import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 
-import { Tab2PageRoutingModule } from './tab2-routing.module';
+import { MenusPageRoutingModule } from './menus-routing.module';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
@@ -14,9 +14,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule,
+    MenusPageRoutingModule,
     Ng2SearchPipeModule,
   ],
-  declarations: [Tab2Page],
+  declarations: [MenusPage],
 })
-export class Tab2PageModule {}
+export class MenusPageModule {}

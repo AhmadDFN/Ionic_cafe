@@ -1,6 +1,13 @@
 ion-content {
   background: var(--dany-secondary);
 }
+hr {
+  background: var(--dany-gold);
+}
+.listmenu,
+.seeall {
+  color: var(--dany-white);
+}
 #header {
   background-color: var(--dany-secondary);
   box-shadow: unset;
