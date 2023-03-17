@@ -18,7 +18,11 @@ export class LoginPage implements OnInit {
     public gb: GlobalService
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    if (localStorage.getItem('login')) {
+      this.route.navigateRoot('tabs/tab1');
+    }
+  }
 
   goLogin() {
     // Validation
@@ -60,9 +64,9 @@ export class LoginPage implements OnInit {
             JSON.stringify(this.result.data.member)
           );
           this.route.navigateRoot('tabs/tab1'); // Jika Berhasil Login diarahkan ke tab1
-          this.gb.notif(this.result.mess, 'success'); // Notifikasi
+          this.gb.notif(this.result.mess, 'success', 2000); // Notifikasi
         } else {
-          this.gb.notif(this.result.mess, 'danger'); // Notifikasi
+          this.gb.notif(this.result.mess, 'danger', 2000); // Notifikasi
         }
       });
 

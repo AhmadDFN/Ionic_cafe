@@ -15,7 +15,7 @@
       <p>{{ user.email }}</p>
       <small>{{ user.level }}</small>
     </ion-label>
-    <ion-chip color="warning" mode="md" outline="true">
+    <ion-chip color="warning" mode="md" outline="true" (click)="goTo('user')">
       <ion-label>Edit</ion-label>
       <ion-icon name="settings"></ion-icon>
     </ion-chip>
@@ -74,5 +74,4 @@
     </ion-item>
   </ion-list>
   <!-- End Log Out -->
-
 </ion-content>
