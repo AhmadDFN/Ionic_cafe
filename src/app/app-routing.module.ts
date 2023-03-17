@@ -30,6 +30,19 @@ const routes: Routes = [
       import('./member/member.module').then((m) => m.MemberPageModule),
   },
   // {
+  //   path: 'user',
+  //   loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
+  // },
+  // {
+  //   path: 'privacy-policy',
+  //   loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
+  // },
+  // {
+  //   path: 'faq',
+  //   loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
+  // },
+
+  // {
   //   path: 'tabmenu',
   //   loadChildren: () => import('./tabmenu/tabmenu.module').then( m => m.TabmenuPageModule)
   // },
