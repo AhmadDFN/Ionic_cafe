@@ -1,3 +1,7 @@
+ion-content {
+  margin: 0 5px;
+}
+
 ion-toolbar {
   color: var(--dany-gold);
   background: var(--dany-secondary);
@@ -19,6 +23,11 @@ p {
   margin: 0;
 }
 
+img {
+  width: 20vh;
+  height: 20vh;
+}
+
 hr {
   background: var(--dany-gold);
 }
@@ -27,6 +36,8 @@ h2 {
   font-family: var(--dany-font-hack-bold);
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
   color: white;
 }
 
@@ -110,4 +121,11 @@ ion-col {
 
 ion-item {
   --ion-item-background: var(--dany-primary);
+}
+
+p.price {
+  font-size: smaller;
+  span {
+    font-family: var(--dany-font-hack-bold);
+  }
 }

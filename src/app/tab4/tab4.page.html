@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="warning">
+  <ion-toolbar>
     <ion-title>ACCOUNT</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,12 +11,12 @@
       <img src="https://ionicframework.com/docs/img/demos/avatar.svg" />
     </ion-avatar>
     <ion-label>
-      <h2>{{ user.name }}</h2>
+      <h2 class="hack-bold">{{ user.name }}</h2>
       <p>{{ user.email }}</p>
-      <small>{{ user.level }}</small>
+      <small class="hack-bold">{{ user.role }}</small>
     </ion-label>
     <ion-chip color="warning" mode="md" outline="true" (click)="goTo('user')">
-      <ion-label>Edit</ion-label>
+      <ion-label class="an-color-white">Edit</ion-label>
       <ion-icon name="settings"></ion-icon>
     </ion-chip>
   </ion-item>
@@ -51,15 +51,15 @@
     <ion-list-header>
       <ion-label>HELP</ion-label>
     </ion-list-header>
-    <ion-item>
-      <ion-icon name="chatbox-ellipses" slot="start"></ion-icon>
-      <ion-label>Chat</ion-label>
+    <ion-item (click)="goTo('termcondition')">
+      <ion-icon name="newspaper-sharp" slot="start"></ion-icon>
+      <ion-label>Term and Condition</ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item (click)="goTo('faq')">
       <ion-icon name="help-circle" slot="start"></ion-icon>
       <ion-label>FAQ</ion-label>
     </ion-item>
-    <ion-item>
+    <ion-item (click)="goTo('privacy-policy')">
       <ion-icon name="shield-checkmark" slot="start"></ion-icon>
       <ion-label>Privacy Policy</ion-label>
     </ion-item>

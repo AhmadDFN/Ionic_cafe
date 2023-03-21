@@ -116,3 +116,10 @@ ion-col {
 ion-item {
   --ion-item-background: var(--dany-primary);
 }
+
+p.price {
+  font-size: smaller;
+  span {
+    font-family: var(--dany-font-hack-bold);
+  }
+}

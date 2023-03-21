@@ -1,0 +1,31 @@
+ion-toolbar {
+  color: var(--dany-gold);
+  background: var(--dany-secondary);
+}
+
+.listmenu,
+.seeall {
+  color: var(--dany-white);
+}
+
+* {
+  font-family: var(--dany-font-hack);
+}
+
+p {
+  font-family: var(--dany-font-hack-italic);
+  color: var(--dany-gold);
+  padding: 0;
+  margin: 0;
+}
+
+hr {
+  background: var(--dany-gold);
+}
+
+h2 {
+  font-family: var(--dany-font-hack-bold);
+  padding: 0;
+  margin: 0;
+  color: white;
+}

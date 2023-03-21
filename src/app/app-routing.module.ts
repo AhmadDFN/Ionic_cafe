@@ -34,14 +34,21 @@ const routes: Routes = [
     loadChildren: () =>
       import('./user/user.module').then((m) => m.UserPageModule),
   },
-  // {
-  //   path: 'privacy-policy',
-  //   loadChildren: () => import('./privacy-policy/privacy-policy.module').then( m => m.PrivacyPolicyPageModule)
-  // },
-  // {
-  //   path: 'faq',
-  //   loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
-  // },
+  {
+    path: 'privacy-policy',
+    loadChildren: () =>
+      import('./privacy-policy/privacy-policy.module').then(
+        (m) => m.PrivacyPolicyPageModule
+      ),
+  },
+  {
+    path: 'faq',
+    loadChildren: () => import('./faq/faq.module').then((m) => m.FaqPageModule),
+  },
+  {
+    path: 'termcondition',
+    loadChildren: () => import('./termcondition/termcondition.module').then( m => m.TermconditionPageModule)
+  },
 
   // {
   //   path: 'tabmenu',
