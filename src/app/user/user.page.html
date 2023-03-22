@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Edit User Profile</ion-title>
-    <ion-buttons slot="start">
+    <ion-title style="color: var(--dany-gold)">Edit User Profile</ion-title>
+    <ion-buttons slot="start" style="color: var(--dany-gold)">
       <ion-back-button text=""></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
@@ -19,6 +19,14 @@
         type="password"
         placeholder="*******"
         [(ngModel)]="user.password"
+      ></ion-input>
+    </ion-item>
+    <ion-item class="ion-margin-horizontal ion-no-padding">
+      <ion-label position="stacked">Password 2</ion-label>
+      <ion-input
+        type="password"
+        placeholder="*******"
+        [(ngModel)]="user.password2"
       ></ion-input>
     </ion-item>
     <ion-button

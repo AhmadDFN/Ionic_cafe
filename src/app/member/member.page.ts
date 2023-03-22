@@ -35,6 +35,9 @@ export class MemberPage implements OnInit {
     const member = JSON.parse(dataMember);
     this.profile = Object.keys(member).length > 0 ? member : {};
 
+    console.log(Object.keys(member).length);
+    console.log(this.profile);
+
     // Cek Data Member
     if (Object.keys(member).length == 0) {
       // Jika di localstorage data member kosong maka
@@ -47,6 +50,7 @@ export class MemberPage implements OnInit {
       // Merubah tipe data jenis kelamin
       this.profile.cus_jk = this.profile.cus_jk.toString();
     }
+    console.log(this.profile);
   }
 
   saveMember() {

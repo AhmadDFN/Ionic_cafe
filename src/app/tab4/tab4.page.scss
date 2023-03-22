@@ -123,3 +123,12 @@ ion-col {
 ion-item {
   --ion-item-background: var(--dany-primary);
 }
+ion-list {
+  ion-list-header {
+    ion-label {
+      font-family: var(--dany-font-hack-bold);
+      color: var(--dany-white);
+      font-size: x-large;
+    }
+  }
+}

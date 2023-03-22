@@ -27,21 +27,21 @@
     <ion-list-header>
       <ion-label>INFO</ion-label>
     </ion-list-header>
-    <ion-item (click)="goTo('member')">
+    <ion-item (click)="goTo('member')" button>
       <ion-icon name="person" slot="start"></ion-icon>
       <ion-label>Member Profile</ion-label>
     </ion-item>
-    <ion-item (click)="goTo('card')">
+    <ion-item (click)="goTo('card')" disabled="true">
       <ion-icon name="card" slot="start"></ion-icon>
-      <ion-label>Member Card</ion-label>
+      <ion-label>Member Card | COMING SOON</ion-label>
     </ion-item>
-    <ion-item (click)="goTo('tabs/tab3')">
+    <ion-item (click)="goTo('tabs/tab3')" button>
       <ion-icon name="cart" slot="start"></ion-icon>
       <ion-label>Transaction</ion-label>
     </ion-item>
-    <ion-item (click)="goTo('transaksi')">
+    <ion-item (click)="goTo('transaksi')" disabled="true">
       <ion-icon name="diamond-outline" slot="start"></ion-icon>
-      <ion-label>Poin</ion-label>
+      <ion-label>Poin | COMING SOON</ion-label>
     </ion-item>
   </ion-list>
   <!-- End Info -->
@@ -51,15 +51,15 @@
     <ion-list-header>
       <ion-label>HELP</ion-label>
     </ion-list-header>
-    <ion-item (click)="goTo('termcondition')">
+    <ion-item (click)="goTo('termcondition')" button>
       <ion-icon name="newspaper-sharp" slot="start"></ion-icon>
       <ion-label>Term and Condition</ion-label>
     </ion-item>
-    <ion-item (click)="goTo('faq')">
+    <ion-item (click)="goTo('faq')" button>
       <ion-icon name="help-circle" slot="start"></ion-icon>
       <ion-label>FAQ</ion-label>
     </ion-item>
-    <ion-item (click)="goTo('privacy-policy')">
+    <ion-item (click)="goTo('privacy-policy')" button>
       <ion-icon name="shield-checkmark" slot="start"></ion-icon>
       <ion-label>Privacy Policy</ion-label>
     </ion-item>

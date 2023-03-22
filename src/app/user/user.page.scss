@@ -1,3 +1,17 @@
 * {
   font-family: var(--dany-font-hack);
 }
+ion-content {
+  --background: var(--dany-primary);
+}
+ion-list {
+  background: var(--dany-primary);
+  ion-item {
+    --background: var(--dany-primary);
+    padding: 10px;
+  }
+
+  ion-input {
+    color: var(--dany-gold);
+  }
+}

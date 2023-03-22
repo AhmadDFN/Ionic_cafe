@@ -6,7 +6,9 @@ import { LoadingController, ToastController } from '@ionic/angular';
 })
 export class GlobalService {
   // Alamat Server API
-  API_URL: any = 'https://dany.inforkomwecmdn.my.id/api/';
+  // API_URL: any = 'https://dany.inforkomwecmdn.my.id/api/';
+  // API_URL: any = 'https://yoto.inforkomwecmdn.my.id/api/';
+  API_URL: any = 'http://localhost:8000/api/';
 
   constructor(
     public loading: LoadingController,
