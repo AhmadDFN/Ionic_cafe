@@ -11,6 +11,7 @@ import { GlobalService } from '../services/global.service';
 export class UserPage implements OnInit {
   result: any = {};
   user: any = {};
+  data: any;
 
   constructor(
     public http: HttpClient,
@@ -26,8 +27,8 @@ export class UserPage implements OnInit {
   }
 
   getUser() {
-    let data = localStorage.getItem('login');
-    this.user = data ? JSON.parse(data) : null;
+    this.data = localStorage.getItem('login');
+    this.user = this.data ? JSON.parse(this.data) : null;
   }
 
   async saveUser() {
